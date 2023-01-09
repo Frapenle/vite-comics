@@ -1,6 +1,12 @@
-<template lang="">
+<template>
     <header>
-        <h1>Header</h1>
+        <img src="../assets/img/dc-logo.png" alt="DC logo">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
     </header>
 </template>
 
@@ -10,6 +16,8 @@ export default {
 }
 </script>
 
-<style lang="" scoped>
-    
+<style scoped>
+header {
+    display: flex;
+}
 </style>
