@@ -1,6 +1,6 @@
 <template>
     <header>
-        <nav>
+        <nav class="container">
             <div class="logo">
                 <img src="../assets/img/dc-logo.png" alt="DC logo">
             </div>
@@ -66,11 +66,10 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+@use '../styles/general.scss' as *;
 
 nav {
     height: 120px;
-    max-width: 950px;
-    margin: 10px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
