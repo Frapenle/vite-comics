@@ -69,8 +69,6 @@ export default {
 @use '../styles/general.scss' as *;
 
 header {
-    font-family: 'Roboto',
-        sans-serif;
     height: 85px;
 }
 
