@@ -68,8 +68,15 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
+header {
+    font-family: 'Roboto',
+        sans-serif;
+    height: 85px;
+}
+
 nav {
-    height: 120px;
+    font-size: .65rem;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +106,6 @@ ul {
 }
 
 img {
-    width: 100%;
+    width: 65px;
 }
 </style>
