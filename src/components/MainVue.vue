@@ -1,6 +1,9 @@
 <template lang="">
     <main>
         <div class="container">
+            <div class="current-series">
+                <h4>current series</h4>
+            </div>
             <div class="cards-wrapper">
                 <CardComponent v-for="card in cardsList"
                 :imgPath="card.thumb"
@@ -110,14 +113,32 @@ export default {
 main {
     width: 100%;
     background-color: black;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem;
     color: white;
 }
+
+.current-series {
+    line-height: 0;
+    padding: 1.4rem 1rem;
+    color: white;
+    background-color: $main-color;
+    position: absolute;
+    top: calc(-3rem - 1.4rem);
+    left: 0;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+}
+
 
 .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    font-size: .9rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .flex {
@@ -126,6 +147,8 @@ main {
 }
 
 button {
+    margin-top: 2rem;
     background-color: $main-color;
+    text-transform: uppercase;
 }
 </style>

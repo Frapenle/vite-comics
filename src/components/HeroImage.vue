@@ -1,11 +1,6 @@
 <template lang="">
     <div class="jumbo">
         <img src="../assets/img/jumbotron.jpg" alt="">
-        <div class="container">
-            <div class="current-series">
-                <h4>current series</h4>
-            </div>
-        </div>
     </div>
 
 
@@ -20,12 +15,12 @@ export default {
 
 .jumbo {
     height: 300px;
-    overflow: hidden;
 }
 
-.current-series {
-    padding: 1rem;
-    color: white;
-    background-color: $main-color;
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top;
 }
 </style>
