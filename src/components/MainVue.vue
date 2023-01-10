@@ -1,6 +1,8 @@
 <template lang="">
     <main>
-        <h1>main</h1>
+        <div class="container">
+            <h1> --> Content goes here --> </h1>
+        </div>
     </main>
 </template>
 
@@ -10,6 +12,13 @@ export default {
 }
 </script>
 
-<style lang="" scoped>
-    
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/general.scss' as *;
+
+main {
+    background-color: black;
+    color: white;
+    height: 100px;
+}
 </style>
