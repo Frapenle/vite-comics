@@ -1,11 +1,13 @@
 <script>
 import HeaderVue from "./components/HeaderVue.vue";
+import HeroImage from "./components/HeroImage.vue";
 import MainVue from "./components/MainVue.vue";
 import FooterVue from "./components/FooterVue.vue";
 
 export default {
   components: {
     HeaderVue,
+    HeroImage,
     MainVue,
     FooterVue
   }
@@ -14,6 +16,7 @@ export default {
 
 <template>
   <HeaderVue />
+  <HeroImage />
   <MainVue />
   <FooterVue />
 </template>
