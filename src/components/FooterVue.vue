@@ -49,7 +49,19 @@
                 </nav>
             </div>
         </section>
-        <section class="footer-down"></section>
+        <section class="footer-bottom">
+            <div class="container">
+                <button><a href="#">Sign up now!</a></button>
+                <div class="social-network">
+                    <h4>Follow us</h4>
+                    <a href="#" class=""><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-twitter.png" alt="Twitter"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-youtube.png" alt="YouTube"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></a>
+                    <a href="#" class=""><img src="../assets/img/footer-periscope.png" alt="Periscope"></a>
+                </div>
+            </div>
+        </section>
     </footer>
 </template>
 
@@ -89,5 +101,18 @@ li {
 nav {
     display: flex;
     gap: 4rem;
+}
+
+footer-bottom {
+    height: 100px;
+
+    img {
+        width: 60px;
+    }
+}
+
+.social-network {
+    display: flex;
+    justify-content: space-between;
 }
 </style>
