@@ -1,9 +1,7 @@
 <template lang="">
     <footer>
-        <div class="container">
-
-        
-            <section class="footer-top">
+        <section class="footer-top">
+            <div class="container">
                 <nav>
                     <!-- first column list -->
                     <ul>
@@ -48,13 +46,10 @@
                         <li><a href="#">Videos</a></li>
                         <li><a href="#">News</a></li>
                     </ul>
-
-
-
                 </nav>
-            </section>
-            <section class="footer-down"></section>
-        </div>
+            </div>
+        </section>
+        <section class="footer-down"></section>
     </footer>
 </template>
 
@@ -70,7 +65,11 @@ export default {
 
 footer {
     background-color: grey;
-    padding: 2rem 0;
+}
+
+.footer-top {
+    background-image: url(../assets/img/footer-bg.jpg);
+    padding: 1.5rem 0;
 }
 
 li {
