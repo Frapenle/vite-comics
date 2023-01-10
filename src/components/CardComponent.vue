@@ -1,6 +1,11 @@
 <template lang="">
     <div class="card">
-
+        <div class="img">
+            <img :src="imgPath" :alt="serie">
+        </div>
+        <div class="series">
+            <h5>{{serie}}</h5>
+        </div>
     </div>
 </template>
 <script>
@@ -17,9 +22,24 @@ export default {
 </script>
 <style lang="scss">
 .card {
-    height: 100px;
-    width: calc(100% / 4);
-    border: 2px solid red;
-    padding: 2rem;
+    width: calc(100% / 6 - 1rem);
+    margin-bottom: 60px;
+    cursor: pointer;
+
+}
+
+.img {
+    aspect-ratio: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+h5 {
+    font-weight: 300;
+    padding: .7rem 0;
 }
 </style>
