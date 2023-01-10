@@ -83,7 +83,6 @@ ul {
     font-weight: 500;
 
     a {
-        text-decoration: none;
         color: black;
     }
 
