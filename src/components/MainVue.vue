@@ -8,6 +8,9 @@
                 :serie="card.series"
                 :type="card.type"/>
             </div>
+            <div class="flex">
+                <button>Load more</button>
+            </div>
         </div>
     </main>
 </template>
@@ -105,6 +108,7 @@ export default {
 @use '../styles/general.scss' as *;
 
 main {
+    width: 100%;
     background-color: black;
     padding: 2rem;
     color: white;
@@ -112,11 +116,16 @@ main {
 
 .cards-wrapper {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.card {
-    width: calc(100% / 6 - 1rem);
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: $main-color;
 }
 </style>
