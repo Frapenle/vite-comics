@@ -5,10 +5,9 @@
                 <img src="../assets/img/dc-logo.png" alt="DC logo">
             </div>
             <ul>
-                <li>menu 1</li>
-                <li>menu 2</li>
-                <li>menu 3</li>
-                <li>menu 4</li>
+                <li v-for="navItem in navHeader" :class="(navItem.active) ? 'active' : ''"><a href="#">{{
+                    navItem.name.toUpperCase()
+                }}</a></li>
             </ul>
         </nav>
     </header>
@@ -65,14 +64,43 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+
 nav {
+    height: 120px;
+    max-width: 950px;
+    margin: 10px auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 ul {
+    height: 100%;
+    align-items: center;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+    font-weight: 500;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &.active {
+            color: $main-color;
+            border-bottom: 4px solid $main-color;
+        }
+    }
+}
+
+img {
+    width: 100%;
 }
 </style>
