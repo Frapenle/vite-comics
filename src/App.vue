@@ -13,25 +13,12 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-
-    <HeaderVue />
-    <MainVue />
-    <FooterVue />
-  </div>
-
+  <HeaderVue />
+  <MainVue />
+  <FooterVue />
 </template>
 
-<style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 50px;
-}
+<style lang="scss">
+@use "./styles/general.scss" as *;
+@use "./styles/partials/variables" as *;
 </style>
