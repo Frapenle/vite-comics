@@ -25,13 +25,11 @@ export default {
     width: calc(100% / 6 - 1rem);
     margin-bottom: 60px;
     cursor: pointer;
-
 }
 
 .img {
     aspect-ratio: 1;
     width: 100%;
-    overflow: hidden;
 }
 
 img {
