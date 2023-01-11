@@ -2,7 +2,7 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="../assets/img/dc-logo.png" alt="DC logo">
+                <a href=""><img src="../assets/img/dc-logo.png" alt="DC logo"></a>
             </div>
             <ul>
                 <li v-for="navItem in navHeader" :class="(navItem.active) ? 'active' : ''"><a href="#">{{
@@ -95,6 +95,7 @@ ul {
         height: 100%;
         display: flex;
         align-items: center;
+        border-bottom: 4px solid transparent;
 
         &.active {
             color: $main-color;
