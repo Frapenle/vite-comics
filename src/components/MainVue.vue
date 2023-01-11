@@ -192,22 +192,28 @@ button {
     width: 100%;
     background-color: $main-color;
 
-    img {
-        width: 40px;
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
+
+    img {
+        width: 30px;
+    }
+
 }
 
-.container,
 .banner-items {
     padding: 1rem 0;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 
     .banner-text {
         margin-left: .6rem;
         text-transform: uppercase;
         font-weight: 300;
+        font-size: .7rem;
     }
 }
 </style>
