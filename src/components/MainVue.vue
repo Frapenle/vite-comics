@@ -15,6 +15,14 @@
                 <button>Load more</button>
             </div>
         </div>
+        <div class="banner">
+            <div class="container">
+                <div class="banner-items" v-for="element in bannersList">
+                    <img :src="getImageName(element.imageName)" :alt="element.text">
+                    <div class="banner-text">{{element.text}}</div>
+                </div>
+            </div>
+        </div>
     </main>
 </template>
 
@@ -26,6 +34,28 @@ export default {
     components: { CardComponent },
     data() {
         return {
+            bannersList: [
+                {
+                    text: 'digital comics',
+                    imageName: "comics-digital-comics.png"
+                },
+                {
+                    text: 'dc merchandise',
+                    imageName: "comics-merchandise.png"
+                },
+                {
+                    text: 'subscription',
+                    imageName: "comics-subscriptions.png"
+                },
+                {
+                    text: 'comic shop locator',
+                    imageName: 'comics-shop-locator.png'
+                },
+                {
+                    text: 'dc power visa',
+                    imageName: "dc-power-visa.svg"
+                }
+            ],
             cardsList: [
                 {
                     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -103,6 +133,12 @@ export default {
         }
     },
 
+    methods: {
+        getImageName: function (imgName) {
+            return new URL(`../assets/img/buy-${imgName}`, import.meta.url).href;
+        }
+    },
+
 }
 </script>
 
@@ -113,7 +149,7 @@ export default {
 main {
     width: 100%;
     background-color: black;
-    padding: 3rem 2rem 2rem;
+    padding-top: 3rem;
     color: white;
 }
 
@@ -147,8 +183,31 @@ main {
 }
 
 button {
-    margin-top: 2rem;
+    margin: 1rem 0;
     background-color: $main-color;
     text-transform: uppercase;
+}
+
+.banner {
+    width: 100%;
+    background-color: $main-color;
+
+    img {
+        width: 40px;
+    }
+}
+
+.container,
+.banner-items {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .banner-text {
+        margin-left: .6rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
 }
 </style>
