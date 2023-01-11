@@ -51,14 +51,18 @@
         </section>
         <section class="footer-bottom">
             <div class="container">
-                <button><a href="#">Sign up now!</a></button>
-                <div class="social-network">
-                    <h4>Follow us</h4>
-                    <a href="#" class=""><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
-                    <a href="#" class=""><img src="../assets/img/footer-twitter.png" alt="Twitter"></a>
-                    <a href="#" class=""><img src="../assets/img/footer-youtube.png" alt="YouTube"></a>
-                    <a href="#" class=""><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></a>
-                    <a href="#" class=""><img src="../assets/img/footer-periscope.png" alt="Periscope"></a>
+                <div class="footer-left">
+                    <button><a href="#">Sign up now!</a></button>
+                </div>
+                <div class="footer-right">
+                    <div class="social-network">
+                        <h3>Follow us</h3>
+                        <a href="#" class=""><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
+                        <a href="#" class=""><img src="../assets/img/footer-twitter.png" alt="Twitter"></a>
+                        <a href="#" class=""><img src="../assets/img/footer-youtube.png" alt="YouTube"></a>
+                        <a href="#" class=""><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></a>
+                        <a href="#" class=""><img src="../assets/img/footer-periscope.png" alt="Periscope"></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -74,10 +78,6 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
-
-footer {
-    background-color: grey;
-}
 
 .footer-top {
     background-image: url(../assets/img/footer-bg.jpg);
@@ -103,16 +103,39 @@ nav {
     gap: 4rem;
 }
 
-footer-bottom {
-    height: 100px;
+.footer-bottom {
+    height: 80px;
+    display: flex;
+    background-color: $footer-bottom-bg;
+}
 
-    img {
-        width: 60px;
+.footer-left>button {
+    background-color: transparent;
+    border: 2px solid $main-color;
+
+    a {
+        color: white;
     }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 30px;
 }
 
 .social-network {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+
+    h3 {
+        color: $main-color;
+    }
 }
 </style>
